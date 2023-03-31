@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(247, 242, 235);
+}
+.container {
+    padding: 20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    min-height: 500px;
+    min-width: 400px;
+    margin-top:-250px; /* this is half the height of your div*/  
+    margin-left:-200px; /*this is half of width of your div*/
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+    border: 6px solid black;
+    border-width: thick;
+    justify-content: space-between;
+    border-radius: 4%;
+}
+
+.display {
+    border: 6px solid black;
+    flex: 0.30;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.reset-and-restart {
+    display: flex;
+    flex-direction: row;
+    flex: 0.14;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reset-and-restart button {
+    width: 34%;
+    min-height: 65px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    flex: 0.56;
+    justify-content: space-between;
+
+}
+
+.buttons > div {
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 65px;
+    height: 65px;
+}
+
