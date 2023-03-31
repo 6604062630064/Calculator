@@ -33,6 +33,10 @@ function updateDisplay() {
     }
 }
 
+function isInt(n) {
+    return n % 1 === 0;
+}
+
 function sum(e) {
     if (checkPair()) {
         number1 = parseInt(number1)
@@ -62,7 +66,12 @@ function sum(e) {
         number1 = total
         number2 = "";
         operator = ""
-        mainDisplay.textContent = number1;
+        if (!isInt(number1)) {
+            mainDisplay.textContent = number1.toFixed(5);
+        }
+        else {
+            mainDisplay.textContent = number1
+        }
     }
     else {
         return;
@@ -98,8 +107,8 @@ let operatorList = { divide: "÷", multiply: "x", subtraction: "-", addition: "+
 
 for (i = 0; i < 10; i++) {
     button = document.querySelector(`#${CSS.escape("" + i)}`)
-    button.addEventListener("click", (e) => {   
-        
+    button.addEventListener("click", (e) => {
+
         updateDisplay()
         if (isBeforeOperator()) {
             number1 += e.target.id;

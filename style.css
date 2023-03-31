@@ -1,11 +1,13 @@
 body {
     background-color: rgb(247, 242, 235);
     font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 .container {
+    background-color: grey;
     padding: 20px;
     position:absolute;
-    top:50%;
+    top:40%;
     left:50%;
     min-height: 500px;
     min-width: 400px;
@@ -22,12 +24,14 @@ body {
 }
 
 .display {
+    background-color: rgb(247, 242, 235);
     border: 6px solid black;
     flex: 0.30;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 12px;
 }
 
 
@@ -37,11 +41,13 @@ body {
     flex: 0.14;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .reset-and-restart button {
-    width: 34%;
+    width: 46%;
     min-height: 65px;
+    font-size: inherit;
 }
 
 .buttons {
@@ -53,6 +59,23 @@ body {
 
 }
 
+#clear {
+    background-color: lightcoral;
+}
+
+#clear:hover {
+    background-color: rgba(240, 128, 128, 0.781)
+}
+
+#delete {
+    background-color: lightblue;
+}
+
+#delete:hover {
+    background-color: rgba(173, 216, 230, 0.685);
+}
+
+
 .buttons > div {
     display: flex;
     flex: auto;
@@ -61,10 +84,19 @@ body {
 }
 
 .buttons button {
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
+    font-size: inherit;
+}
+
+.buttons button:hover {
+    background-color: rgba(247, 242, 235, 0.726);
 }
 
 .hide {
     visibility: hidden;
+}
+
+button {
+    border: solid;
 }
